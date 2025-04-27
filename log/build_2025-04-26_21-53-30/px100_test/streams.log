@@ -1,0 +1,24 @@
+[1.480s] Invoking command in '/home/jeff/interbotix_ws/src/px100_test': PYTHONPATH=/home/jeff/interbotix_ws/build/px100_test/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeff/interbotix_ws/install/px100_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/px100_test build --build-base /home/jeff/interbotix_ws/build/px100_test/build install --record /home/jeff/interbotix_ws/build/px100_test/install.log --single-version-externally-managed install_data
+[1.914s] running egg_info
+[1.914s] writing ../../build/px100_test/px100_test.egg-info/PKG-INFO
+[1.914s] writing dependency_links to ../../build/px100_test/px100_test.egg-info/dependency_links.txt
+[1.914s] writing entry points to ../../build/px100_test/px100_test.egg-info/entry_points.txt
+[1.914s] writing requirements to ../../build/px100_test/px100_test.egg-info/requires.txt
+[1.914s] writing top-level names to ../../build/px100_test/px100_test.egg-info/top_level.txt
+[1.935s] reading manifest file '../../build/px100_test/px100_test.egg-info/SOURCES.txt'
+[1.935s] writing manifest file '../../build/px100_test/px100_test.egg-info/SOURCES.txt'
+[1.935s] running build
+[1.935s] running build_py
+[1.935s] copying px100_test/simple_control.py -> /home/jeff/interbotix_ws/build/px100_test/build/lib/px100_test
+[1.935s] running install
+[1.935s] running install_lib
+[1.935s] copying /home/jeff/interbotix_ws/build/px100_test/build/lib/px100_test/simple_control.py -> /home/jeff/interbotix_ws/install/px100_test/lib/python3.10/site-packages/px100_test
+[1.935s] byte-compiling /home/jeff/interbotix_ws/install/px100_test/lib/python3.10/site-packages/px100_test/simple_control.py to simple_control.cpython-310.pyc
+[1.936s] running install_data
+[1.936s] running install_egg_info
+[1.936s] removing '/home/jeff/interbotix_ws/install/px100_test/lib/python3.10/site-packages/px100_test-0.0.0-py3.10.egg-info' (and everything under it)
+[1.952s] Copying ../../build/px100_test/px100_test.egg-info to /home/jeff/interbotix_ws/install/px100_test/lib/python3.10/site-packages/px100_test-0.0.0-py3.10.egg-info
+[1.953s] running install_scripts
+[1.962s] Installing simple_control script to /home/jeff/interbotix_ws/install/px100_test/lib/px100_test
+[1.962s] writing list of installed files to '/home/jeff/interbotix_ws/build/px100_test/install.log'
+[2.035s] Invoked command in '/home/jeff/interbotix_ws/src/px100_test' returned '0': PYTHONPATH=/home/jeff/interbotix_ws/build/px100_test/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jeff/interbotix_ws/install/px100_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/px100_test build --build-base /home/jeff/interbotix_ws/build/px100_test/build install --record /home/jeff/interbotix_ws/build/px100_test/install.log --single-version-externally-managed install_data
