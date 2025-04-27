@@ -802,26 +802,32 @@ class PX100Controller(Node):
         mode_buttons_frame = ttk.Frame(mode_control_frame)
         mode_buttons_frame.pack(fill=tk.X, expand=True)
         
+        # 模式控制区域内的单选按钮样式调整
+        style = ttk.Style()
+        style.configure("TRadiobutton", font=("Arial", 12, "bold"))
+
         # 监听模式按钮（单选按钮）
         self.listen_button = ttk.Radiobutton(
             mode_buttons_frame,
             text="监听模式",
             variable=self.mode_var,
             value="监听模式",
-            command=lambda: self.execute_command("listen")
+            command=lambda: self.execute_command("listen"),
+            style="TRadiobutton"
         )
-        self.listen_button.pack(side=tk.LEFT, padx=20, pady=5, expand=True)
-        
+        self.listen_button.pack(side=tk.LEFT, padx=60, pady=10, expand=True)
+
         # 手动模式按钮（单选按钮）
         self.manual_button = ttk.Radiobutton(
             mode_buttons_frame,
             text="手动模式",
             variable=self.mode_var,
             value="手动模式",
-            command=lambda: self.execute_command("manual")
+            command=lambda: self.execute_command("manual"),
+            style="TRadiobutton"
         )
-        self.manual_button.pack(side=tk.RIGHT, padx=20, pady=5, expand=True)
-        
+        self.manual_button.pack(side=tk.RIGHT, padx=60, pady=10, expand=True)
+
         # 创建中间框架 - 控制按钮
         mid_frame = ttk.LabelFrame(self.gui_window, text="机械臂控制", padding=10)
         mid_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=5)
@@ -892,10 +898,14 @@ class PX100Controller(Node):
         # 夹爪控制子框架
         gripper_frame = ttk.LabelFrame(control_frame, text="夹爪控制", padding=10)
         gripper_frame.pack(fill=tk.X, pady=5)
-        
+
+        # 夹爪按钮垂直排列
+        gripper_buttons_frame = ttk.Frame(gripper_frame)
+        gripper_buttons_frame.pack(fill=tk.BOTH, expand=True, pady=5)
+
         # 打开夹爪按钮
         self.open_button = tk.Button(
-            gripper_frame,
+            gripper_buttons_frame,
             text="打开夹爪",
             width=GUI_CONFIG["button_width"],
             height=GUI_CONFIG["button_height"],
@@ -903,11 +913,11 @@ class PX100Controller(Node):
             bg=BUTTON_COLORS["open"],
             command=lambda: self.execute_command("open")
         )
-        self.open_button.pack(side=tk.LEFT, padx=5, pady=5)
-        
+        self.open_button.pack(pady=5, fill=tk.X)
+
         # 关闭夹爪按钮
         self.close_button = tk.Button(
-            gripper_frame,
+            gripper_buttons_frame,
             text="关闭夹爪",
             width=GUI_CONFIG["button_width"],
             height=GUI_CONFIG["button_height"],
@@ -915,7 +925,7 @@ class PX100Controller(Node):
             bg=BUTTON_COLORS["close"],
             command=lambda: self.execute_command("close")
         )
-        self.close_button.pack(side=tk.RIGHT, padx=5, pady=5)
+        self.close_button.pack(pady=5, fill=tk.X)
         
         # 创建状态控制区域（底部独立区域）
         status_control_frame = ttk.LabelFrame(self.gui_window, text="状态控制", padding=10)
