@@ -1,3 +1,0 @@
-[console_scripts]
-simple_control = px100_test.simple_control:main
-
